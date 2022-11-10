@@ -117,11 +117,11 @@ void CreateNewAsset()
 {
     Asset asset = new Asset();
 
-    Console.Write("\nCreate new (C: Computer, P: phone): ");
+    Console.Write("\nCreate new (C: Computer, M: Mobile): ");
 
     ConsoleKeyInfo key = Console.ReadKey();
     asset.Technology = (key.Key == ConsoleKey.C) ? 
-        new Computer() : (key.Key == ConsoleKey.P) ? 
+        new Computer() : (key.Key == ConsoleKey.M) ? 
         new Mobile() : new Computer();
 
     Console.WriteLine($"\nCreated new {asset.Technology.GetCategory}!");
